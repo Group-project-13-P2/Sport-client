@@ -23,7 +23,7 @@
 
               <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700">Standings Table</a>
 
-              <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700">Schedules</a>
+              <a href="#" id = "schedule-link"class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700">Schedules</a>
 
               <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700">Highlights</a>
 
@@ -176,12 +176,12 @@
 
   <!-- last 15 -->
   <div id="last-15-container">
-    <h1 class="center-text main-text">Last Match</h1>
+    <!-- <h1 class="center-text main-text">Last Match</h1> -->
     <br>
-    <table id="last-match-table" border="2px">
+    <!-- <table id="last-match-table" border="2px"> -->
       <!-- GET DATA FROM JQUERY -->
-    </table>
-  </div>
+    <!-- </table> -->
+  </div> -->
 </div>
 
 <!-- SCHEDULE -->
@@ -205,7 +205,7 @@
           console.log('ini respon next')
 
           resp.next5Match.events.forEach(element => {
-            $('#last-match-table').append(`
+            $('#next-match-table').append(`
                 <thead class="justify-between nama-pertandingan">
                   <tr class="bg-gray-800" >
                     <th class="px-16 py-2">
@@ -282,10 +282,21 @@
         })
       }
     
+      function schedulePage(){
+        $('#jadwal-pertandingan').show()
+        getNext15()
+      }
 
       $(document).ready(function() {
-        getNext15()
+        // getNext15()
         // getLast15()
+
+        $('#schedule-link').on('click', (e) =>{
+          e.preventDefault()
+          console.log('get')
+          getNext15()
+          // schedulePage()
+        })
         });
     </script>
 </body>

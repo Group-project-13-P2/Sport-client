@@ -17,7 +17,12 @@
     justify-content: center;
     margin: auto;
     width: 800px;
+}
 
+#next-match-table{
+    justify-content: center;
+    margin: auto;
+    width: 800px;
 }
 .nama-pertandingan {
     height: 50px;
