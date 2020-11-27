@@ -55,6 +55,10 @@ function onSignIn(googleUser) {
     .fail(error => {
         console.log(error);
     })
+
+    $("#login-page").hide();
+    $("#navbar").show();
+    $("#content").show();
 }
 
 function logout() {
