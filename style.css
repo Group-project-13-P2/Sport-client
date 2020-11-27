@@ -1,0 +1,40 @@
+#next-match-data ,#last-match-data{
+    text-align: center;
+}
+
+#jadwal-pertandingan{
+    /* border: black 2px solid; */
+    justify-content: center;   
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#keterangan{
+    height: 50px;
+    font-weight: bold;
+    font-size: 20;
+}
+#last-match-table{
+    justify-content: center;
+    margin: auto;
+    width: 800px;
+
+}
+.nama-pertandingan {
+    height: 50px;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+.match-data-class{
+    height: 50px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.center-text {
+    text-align: center;
+}
+.main-text{
+    font-size: 30px;
+    /* border: 2px solid black; */
+    
+}
