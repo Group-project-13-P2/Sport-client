@@ -1,3 +1,12 @@
+
+#klasemen{
+    border: black 2px solid;
+    justify-content: center;   
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
 #next-match-data ,#last-match-data{
     text-align: center;
 }
@@ -40,6 +49,12 @@
 }
 .main-text{
     font-size: 30px;
+
+    border: 2px solid black;
+}
+
+
     /* border: 2px solid black; */
     
 }
+
