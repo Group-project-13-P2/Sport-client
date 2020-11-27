@@ -176,11 +176,53 @@
                 dataType: 'json',
                 data: {},
                 success: function (result) {
-                    console.table(result.competition)
+
+                  console.log(result)
+
+                  $('#klasemen').append(`
+                  <div id="klasemen-table"></div>
+                  `)
+
+                  result.standings.forEach(standing => {
+                    console.log(standing);
+                    $('#klasemen-table').append(`
+                      <table border = "2px" id="${standing.stage}-${standing.type}-table">
+                        <tr>
+                          <th>position</th>
+                          <th>team</th>
+                          <th>games played</th>
+                          <th>won</th>
+                          <th>draw</th>
+                          <th>lost</th>
+                          <th>points</th>
+                        </tr>
+                      </table>
+                    `)
+
+                    standing.table.forEach(data => {
+                      console.log(data)
+                      $(`#${standing.stage}-${standing.type}-table`).append(`
+                        <tr class ="match-data-class">
+                            <td class="position"> ${data.position}</td>
+                            <td class="team"> ${data.team.name}</td>
+                            <td class="games-played"> ${data.playedGames}</td>
+                            <td class="won"> ${data.won}</td>
+                            <td class="draw"> ${data.draw}</td>
+                            <td class="lost"> ${data.lost}</td>
+                            <td class="points"> ${data.points}</td>
+                        </tr>
+                      `)
+                    })
+                  })
+
+                  
+
                     
                 }
             })
         });
+
+       
     </script>
 </body>
 </html>
